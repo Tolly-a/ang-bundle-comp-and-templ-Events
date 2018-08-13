@@ -1,0 +1,22 @@
+<h4>just event like click</h4>
+<button (click)="onClick()">Button</button>
+<p>{{ buttonStatus }}</p>
+
+<hr />
+
+<h4>event by passing $event.target.value</h4>
+<!-- event input like keyup but works more correctly -->
+<input type="text" (input)="onKeyUp($event)" />
+<p>{{ inputText }}</p>
+
+<hr />
+
+<h4>event by passing  #lockal_variable_name</h4>
+<input type="text" #myInput (input)="onInputEnter(myInput.value)" />
+<p>{{ inputText }}</p>
+
+<hr />
+
+<h4>passing data by Enter click</h4>
+<input type="text" (keyup.enter)="onEnterKlicked($event)" />
+<p>{{ inputText }}</p>
